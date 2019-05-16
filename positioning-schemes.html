@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container-box {
+            border: 1px solid black;
+        }
+
+        .box {
+            width: 150px;
+            height: 90px;
+            background-color: rgba(255,0,0,0.1);
+            border: 1px solid red;
+        }
+
+        .child-box {
+            background-color: rgba(0,255,0,0.1);
+            border: 1px solid green;
+        }
+
+        .subchild-box {
+            background-color: rgba(0,0,255,0.1);
+            border: 1px solid blue;
+        }
+
+        .relative-box {
+            top: 10px;
+            left: 20px;
+            position: relative;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .fixed-box {
+            position: fixed;
+            bottom: 10px;
+        }
+
+        .absolute-subchild-box {
+            position: absolute;
+            left:-200px;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-box">
+        <div class="box">box-1</div>
+        <div class="box">box-2</div>
+        <div class="box absolute-box">
+            <div class="child-box">box-3-child-1</div>            
+            <div class="child-box" style="position: absolute">
+                <div class="subchild-box">child-2-subchild-1</div>
+                <div class="subchild-box">child-2-subchild-2</div>
+                <div class="subchild-box absolute-subchild-box">child-2-subchild-3 absolute</div>
+            </div>
+            <div class="child-box">box-3-child-3</div>
+        </div>    
+        <div class="box">box-4</div>
+        <div class="box relative-box">box-5 relative</div>
+        <div class="box">box-6</div>
+        <div class="box fixed-box">fixed-box-7</div>
+    </div>
+</body>
+</html>

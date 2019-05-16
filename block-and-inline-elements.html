@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Block elements</title>
+    <style>
+        html {
+            font-size:30px;
+        }
+
+        td, th {
+            border-width: 1px;
+            border-style: solid;
+        }
+
+        body > *{
+            box-sizing: border-box;
+            border: 1px solid red;
+            background: rgba(255,255,255,0.1);
+            min-height: 50px;
+            margin: 0;
+        }
+
+        .anonymous-boxes-example {
+            color: red;
+        }
+
+        .anonymous-boxes-example p {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <div>div - display:block</div>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">table</th>
+                </tr>
+            </thead>
+            <tbody>                
+                <tr>
+                    <td>display:</td>
+                    <td>table</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul style="list-style-type: circle;">
+            <li>ul>li - display:list-item (principal block-level box)</li>            
+        </ul>
+        <div>div - display:block - Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus illo odio, ea fuga ex veniam ab molestiae voluptas voluptatibus consequatur.</div>
+        <div style="width: 200px">div - display:block; width:200px</div>
+        <span>span - display:inline</span>        
+        <div style="display:inline-block">div - display:inline-block</div>
+        <table style="display:inline-table">
+            <thead>
+                <tr>
+                    <th colspan="2">table</th>
+                </tr>
+            </thead>
+            <tbody>                
+                <tr>
+                    <td>display:</td>
+                    <td>inline-table</td>
+                </tr>
+            </tbody>
+        </table>
+        <span>span - display:inline без перевода строки перед элементом</span>        
+        <span style="line-height: 80px">span - display:inline; line-height: 80px</span>
+        <div class="anonymous-boxes-example">div - color: red (Пример анонимного блока <p>перед зеленым параграфом</p> и за ним)</div>        
+        <div class="anonymous-boxes-example">div - color: red (Пример анонимного блока <p style="display: inline">перед зеленым инлайновым параграфом</p> и за ним)</div>        
+    </body>
+</body>
+</html>
